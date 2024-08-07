@@ -235,7 +235,7 @@ async function vlessOverWSHandler(request) {
 	let portWithRandomLog = '';
 	// 日志函数，用于记录连接信息
 	const log = (/** @type {string} */ info, /** @type {string | undefined} */ event) => {
-		//console.log(`[${address}:${portWithRandomLog}] ${info}`, event || '');
+		console.log(`[${address}:${portWithRandomLog}] ${info}`, event || '');
 	};
 	// 获取早期数据头部，可能包含了一些初始化数据
 	const earlyDataHeader = request.headers.get('sec-websocket-protocol') || '';
